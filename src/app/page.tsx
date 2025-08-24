@@ -31,7 +31,7 @@ export default function HomePage() {
             </h1>
             {/* サブタイトル */}
             <p className="text-lg md:text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-              Welcome to Falcon's Aerie!
+              Welcome to Falcon&apos;s Aerie!
             </p>
             {/* 豪華な時計の表示 */}
             <div className="text-center mt-8">

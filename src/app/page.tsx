@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Script from "next/script";
+
 // ホームページコンポーネント
 export default function HomePage() {
   const [mounted, setMounted] = useState(false)
@@ -21,17 +23,23 @@ export default function HomePage() {
       {/* ヘッダーセクション */}
       <header className="relative overflow-hidden">
         {/* Google Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BZNDPJN6H"></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-4BZNDPJN6H');
-              `,
-            }}
-          />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4BZNDPJN6H"
+          strategy="afterInteractive"
+          async
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4BZNDPJN6H');
+            `,
+          }}
+        />
         {/* 背景のグラデーションオーバーレイ */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative container mx-auto px-4 py-16 text-center">

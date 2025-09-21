@@ -20,6 +20,18 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* ヘッダーセクション */}
       <header className="relative overflow-hidden">
+        {/* Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BZNDPJN6H"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-4BZNDPJN6H');
+              `,
+            }}
+          />
         {/* 背景のグラデーションオーバーレイ */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative container mx-auto px-4 py-16 text-center">
@@ -51,17 +63,17 @@ export default function HomePage() {
       </header>
       <header className="relative bg-slate-800/40 border-b border-slate-700">
         <div className="container mx-auto px-4 py-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-          お知らせ
-        </h2>
-        <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          初めまして！はやぶさです。<br />
-          このサイトでは便利なツールや遊び心のある機能を自由に楽しめるようにする予定です。<br />
-          どうぞよろしくお願いします。<br />
-          <br />
-          Xアカウントもフォローしてね！ 👉 <a href="https://x.com/leopard_shun?s=21" className="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">@Leopard_shun</a>
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+            お知らせ
+          </h2>
+          <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            初めまして！はやぶさです。<br />
+            このサイトでは便利なツールや遊び心のある機能を自由に楽しめるようにする予定です。<br />
+            どうぞよろしくお願いします。<br />
+            <br />
+            Xアカウントもフォローしてね！ 👉 <a href="https://x.com/leopard_shun?s=21" className="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">@Leopard_shun</a>
           </p>
-          </div>
+        </div>
       </header>
 
     </div>

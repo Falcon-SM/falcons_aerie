@@ -75,11 +75,13 @@ export default function HomePage() {
             お知らせ
           </h2>
           <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            初めまして！はやぶさです。<br />
+            こんにちは！はやぶさです。<br />
             このサイトでは便利なツールや遊び心のある機能を自由に楽しめるようにする予定です。<br />
+            11月上旬以降、本格的に制作していきます。<br />
             どうぞよろしくお願いします。<br />
             <br />
-            Xアカウントもフォローしてね！ 👉 <a href="https://x.com/leopard_shun?s=21" className="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">@Leopard_shun</a>
+            Xアカウント: <a href="https://x.com/leopard_shun?s=21" className="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">@Leopard_shun</a>
+            GitHub: <a href="https://github.com/Falcon-SM" className="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">@Falcon-SM</a>
           </p>
         </div>
       </header>

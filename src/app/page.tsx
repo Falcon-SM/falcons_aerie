@@ -9,15 +9,14 @@ export default function HomePage() {
 
   useEffect(() => {
     setMounted(true)
-    const timer = setInterval(() => setCurrentTime(new Date()), 1000) // 1秒ごとに時間を更新
-    return () => clearInterval(timer) // クリーンアップ関数
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000)
+    return () => clearInterval(timer)
   }, [])
 
   if (!mounted) return null
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      {/* ヘッダー */}
       <header className="relative overflow-hidden">
         {/* Google Analytics */}
         <Script
@@ -76,7 +75,7 @@ export default function HomePage() {
             11月上旬以降、本格的に制作していきます。<br />
             どうぞよろしくお願いします。<br />
             <br />
-            Xアカウント: <a href="https://x.com/leopard_shun?s=21" className="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">@Leopard_shun</a>
+            𝕏: <a href="https://x.com/leopard_shun?s=21" className="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">@Leopard_shun</a> <br />
             GitHub: <a href="https://github.com/Falcon-SM" className="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">@Falcon-SM</a>
           </p>
         </div>

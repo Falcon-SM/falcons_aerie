@@ -2,18 +2,56 @@
 
 import { useState, useEffect } from "react"
 import Script from "next/script";
+import styles from "./page.module.css";
+
+const headlines = [
+  "Welcome to Falcon's Aerie!",
+  "はやぶさの里へようこそ!",
+];
 
 export default function HomePage() {
-  const [mounted, setMounted] = useState(false)
   const [currentTime, setCurrentTime] = useState(new Date())
+  const [headlineState, setHeadlineState] = useState({
+    currentIndex: 0,
+    previousIndex: null as number | null,
+    isAnimating: true,
+  })
 
   useEffect(() => {
-    setMounted(true)
-    const timer = setInterval(() => setCurrentTime(new Date()), 1000)
-    return () => clearInterval(timer)
-  }, [])
+    const timer = setInterval(() => setCurrentTime(new Date()), 500)
+    let headlineTimeout: ReturnType<typeof setTimeout> | undefined
 
-  if (!mounted) return null
+    const headlineTimer = setInterval(
+      () => {
+        setHeadlineState((currentState) => ({
+          currentIndex: (currentState.currentIndex + 1) % headlines.length,
+          previousIndex: currentState.currentIndex,
+          isAnimating: true,
+        }))
+
+        if (headlineTimeout) {
+          clearTimeout(headlineTimeout)
+        }
+
+        headlineTimeout = setTimeout(() => {
+          setHeadlineState((currentState) => ({
+            ...currentState,
+            previousIndex: null,
+            isAnimating: false,
+          }))
+        }, 650)
+      },
+      10000,
+    )
+
+    return () => {
+      clearInterval(timer)
+      clearInterval(headlineTimer)
+      if (headlineTimeout) {
+        clearTimeout(headlineTimeout)
+      }
+    }
+  }, [])
 
   return (
     <div>
@@ -40,9 +78,23 @@ export default function HomePage() {
 
         <div>
           <div>
-             <p>
-              Welcome to Falcon&apos;s Aerie!
-            </p>
+            <h1 className={styles.rotatingHeadline} aria-live="polite" aria-atomic="true">
+              <span className={styles.headlineViewport}>
+                {headlineState.previousIndex !== null && (
+                  <span className={`${styles.headlineLayer} ${styles.headlineExit}`}>
+                    {headlines[headlineState.previousIndex]}
+                  </span>
+                )}
+                <span
+                  key={headlineState.currentIndex}
+                  className={`${styles.headlineLayer} ${styles.headlineEnter} ${
+                    headlineState.isAnimating ? styles.headlineEntering : ""
+                  }`}
+                >
+                  {headlines[headlineState.currentIndex]}
+                </span>
+              </span>
+            </h1>
             {/* Clock */}
             <div>
               <div>

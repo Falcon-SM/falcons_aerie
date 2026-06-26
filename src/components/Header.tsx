@@ -11,7 +11,7 @@ export default function SiteHeader() {
 
       <div className={styles.inner}>
         <h1 className={styles.title}>
-          <Link href="/">Falcon's Aerie</Link>
+          <Link href="/">Falcon&apos;s Aerie</Link>
         </h1>
 
         <nav className={styles.nav}>

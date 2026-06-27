@@ -30,7 +30,7 @@ export default function Home() {
             <h1>置き場</h1>
             <p>とりあえず、足りていなかった要素をここに置こうと思います。</p>
             <p>Gitの使い方を説明した動画:</p>
-            <iframe width="560" height="315" src="https://drive.google.com/file/d/1a6UIfeIJ2E0Lu_uhgqAC687sXwOX6Uaz/preview" title="Video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://drive.google.com/file/d/1a6UIfeIJ2E0Lu_uhgqAC687sXwOX6Uaz/preview" title="Video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             
             <p>閲覧日時: {timeStr}</p>
             <Link href="/" className='return-home-btn'>

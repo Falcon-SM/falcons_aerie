@@ -12,6 +12,8 @@ export default function Home() {
             <p>SNSアカウント: </p>
             <ul>
                 <li>GitHub: <a href="https://github.com/Falcon-SM" target="_blank">Falcon-SM</a></li>
+                <li>X: <a href="https://x.com/Leopard_shun" target="_blank">Leopard_shun</a></li>
+                <li>Instagram: <a href="https://www.instagram.com/kiri.ns3057" target="_blank">松戸柿无</a></li>
             </ul>
             <p>ご質問やお問い合わせは、以下のフォームからお願いします。</p>
             <iframe

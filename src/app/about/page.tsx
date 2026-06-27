@@ -11,9 +11,9 @@ export default function Home() {
                 <hr />
                 <h2>基本情報</h2>
                 <ul>
-                    <li>名前: 松本 隼</li>
+                    <li>名前: はやぶさ</li>
                     <li>年齢: 15歳</li>
-                    <li>学校: 筑波大学附属駒場高等学校</li>
+                    <li>学校: 都内の高校</li>
                     <li>趣味: プログラミング, AI, サイエンス, ピアノ</li>
                 </ul>
 

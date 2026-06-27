@@ -6,10 +6,13 @@ interface BlogResponse {
   content: string;
 }
 
+const microCMS_API = process.env.microCMS_API;
+
 async function getBlogPost(id: string): Promise<BlogResponse> {
+  
   const res = await fetch(`https://uu1rg4yeag.microcms.io/api/v1/blog/${id}`, {
     headers: {
-      "X-MICROCMS-API-KEY": "2ozjaAVgciNDR9QUMbPr0qvOMutIpGVfkNBx",
+      "X-MICROCMS-API-KEY": microCMS_API ?? "",
     },
     next: { revalidate: 60 },
   });

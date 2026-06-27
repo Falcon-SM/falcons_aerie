@@ -1,7 +1,10 @@
-This is my own Website created in [Next.js](https://nextjs.org).
+情報の課題
 
 ## About
 
-I created this website to share my ideas, including technology. I am also using this website to tell about me and test Next.js projects.
+Next.jsにて、自分のポートフォリオ的なWebサイトを制作しました。
+10要素のうち、わかりにくいかもしれないものとして、表は/blog, 画像は/activities, 動画及び閲覧日時は/thingsにて実装されております。
+ご確認のほど、よろしくお願いいたします。
+なお、公開する時には個人情報を消したりAPIキーを.envに格納したりするつもりです。
 
-Visit my website at [https://falcons-aerie.vercel.app](https://falcons-aerie.vercel.app)!
+デプロイ先→ [https://falcons-aerie.vercel.app](https://falcons-aerie.vercel.app).

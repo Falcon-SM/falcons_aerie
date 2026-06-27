@@ -39,7 +39,7 @@ export default function Home() {
                 <div className="floating">
                     <h3>Apple Swift Student Challenge 2026 winner</h3>
                     <p>中学3年生の時に、Apple Swift Student Challenge 2026にてwinnerを受賞しました。</p>
-                    <img src="ssc.JPG"></img>
+                    <img src="ssc.jpg"></img>
                 </div>
 
                 <div className="floating">
